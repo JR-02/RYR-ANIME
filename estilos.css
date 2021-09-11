@@ -1,0 +1,1774 @@
+/*----Comienzo del CSS Reset----*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*----Fin del CSS Reset----*/
+
+/*----Comienzo de la sección de la fuente----*/
+
+@font-face{
+    /*Titulo de la pagina*/
+    font-family: "Filmotype Austin";
+    src: url(../Tipografia/Filmotype\ Austin.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----Fin de la sección de la fuente----*/
+
+/*----Comienzo de las variables----*/
+
+:root{
+    --color_principal: #146ABD;
+    --color_principal_selec: #11579C;
+    --fondo: #141414;
+    --fondo_oscuro: #0B0B0B;
+    --estreno: #01AE43;
+    --pelicula_anime: linear-gradient(#B10016, #840010);
+    --serie_anime: linear-gradient(#0073D5, #194C8F);
+    --episodio: #646464;
+    --tag-orden: #e71616;
+}
+
+/*----Fin de las variables----*/
+
+/*----Comienzo de las CCS Generales----*/
+
+html{
+    min-width: 240px;
+}
+
+body{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(#1c8ef8, #11579C);
+    /*background-position: center center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+.texto{
+    color: white;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+hr{
+    border: 0;
+    border-top: 1px solid white;
+    height: 1px;
+    margin: 10px 0;
+    display: block;
+    clear: both;
+    opacity: 0.2;
+}
+
+/*----Barra de Scroll----*/
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background: var(--fondo);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--color_principal);
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: var(--color_principal_selec);
+}
+
+/*----Clearfix----*/
+
+.clearfix{
+    clear: both;
+}
+
+/*----Fin de las CCS Generales----*/
+
+/*----Comienzo del header----*/
+header{
+    padding: 20px 0;
+    background: var(--fondo);
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-family: "Filmotype Austin";
+    font-weight: normal;
+    color: var(--color_principal);
+    font-size: 40px;
+    float: left;
+}
+
+header .navbar nav ul li{
+    float: left;
+}
+
+header .navbar nav ul li a{
+    color: #aaa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.4s;
+}
+
+header .navbar nav ul li a:hover,
+header .navbar nav ul li a.activo{
+    color: white;
+}
+
+header .navbar nav ul li a > i{
+    margin-right: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .btn-navbar-responsive{
+    display: none;
+}
+
+/*----Buscador----*/
+.buscador{
+    position: relative;
+    padding: 0;
+    background: transparent;
+    margin-right: 20px;
+    max-width: 200px;
+}
+
+.buscador input{
+    width: 200px;
+    height: 40px;
+    padding: 0 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    background: rgba(0,0,0,0.1);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+}
+
+.buscador input:focus{
+    background: rgba(0,0,0,0.2);
+}
+
+.btn-buscador{
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: transparent;
+    line-height: 40px;
+    text-align: center;
+    color: #aaa;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-buscador:hover{
+    color: white;
+}
+
+/*----Sección del Avatar----*/
+
+.navbar .avatar{
+    display: inline-block;
+}
+
+.navbar .avatar .fa-user{
+    display: flex;
+    vertical-align: top;
+    background: var(--color_principal);
+    font-size: 16px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+/*----Fin del header----*/
+
+/*----Comienzo del cuerpo del contenido----*/
+
+.contenido{
+    width: 100%;
+    margin-top: 25px;
+    background: var(--fondo);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.contenido h2{
+    float: left;
+    margin-left: 10px;
+}
+
+.titulo-episodios,
+.titulo-agregados,
+.titulo-mas-vistos{
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.titulo-episodios,
+.titulo-agregados{
+    margin-top: 40px;
+}
+
+/*----Carousel----*/
+
+.carousel{
+    margin: 20px;
+}
+
+.carousel-contenedor{
+    position: relative;
+}
+
+.carousel-anterior,
+.carousel-siguiente{
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: calc(50% - 25px);
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    background: var(--fondo_oscuro);
+    color: white;
+    opacity: 40%;
+    outline: none;
+    z-index: 1;
+    font-size: 18px;
+    transition: all 0.4s ease;
+}
+
+.carousel-anterior:hover,
+.carousel-siguiente:hover{
+    background: var(--color_principal);
+    opacity: 100%;
+}
+
+.carousel-anterior{
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.carousel-siguiente{
+    right: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+.carousel-elemento{
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 0 2px;
+    border-radius: 8px;
+}
+
+.carousel-elemento::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 30%;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cGF0aCBkPSJNMCAwaDF2MUgweiIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    z-index: 2;
+    opacity: .8;
+}
+
+.carousel-elemento .carousel-imagen img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+.carousel-elemento:hover .carousel-imagen img{
+    filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.carousel-imagen .fa-play{
+    position: absolute;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.carousel-elemento:hover .carousel-imagen .fa-play{
+    opacity: 1;
+}
+
+.carousel-elemento p{
+    position: absolute;
+    text-align: left;
+    color: white;
+    margin-top: 10px;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+}
+
+.carousel-indicadores .glider-dot {
+    margin-top: 20px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    opacity: 0.2;
+    transition: all 0.4s ease;
+}
+
+.carousel-indicadores .glider-dot:hover{
+    opacity: 0.5;
+}
+
+.carousel-indicadores .glider-dot.active{
+    width: 30px;
+    background: var(--color_principal);
+    opacity: 1;
+}
+
+/*----Últimos episodios----*/
+
+.ultimos-episodios{
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+}
+
+.ultimos-episodios .episodio{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--fondo_oscuro);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 14.2em;
+    height: 10.6em;
+}
+
+.episodio .titulo-episodio-agregado{
+    padding-top: 0.4375em;
+    text-align: center;
+    background: var(--fondo_oscuro);
+    z-index: 3;
+}
+
+.titulo-episodio-agregado h3,
+.episodio{
+    text-decoration: none;
+    color: #aaa;
+    transition: all 0.6s ease;
+}
+
+.titulo-episodio-agregado h3{
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.episodio:hover .imagen-episodio img{
+    filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.episodio:hover h3{
+    color: white;
+}
+
+.imagen-episodio{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-width: 14.2em;
+    min-height: 8.2em;
+    margin-bottom: -2px;
+}
+
+.imagen-episodio img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 14.2em;
+    min-height: 8.2em;
+    transition: all 0.6s ease;
+}
+
+.imagen-episodio .fa-play{
+    position: absolute;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.episodio:hover .imagen-episodio .fa-play{
+    opacity: 1;
+}
+
+/*----Últimos animes agregados----*/
+
+.ultimos-animes-agregados{
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 0.5fr);
+}
+
+.ultimos-animes-agregados .animes-agregados{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    background: var(--fondo_oscuro);
+    color: white;
+    cursor: pointer;
+    width: 12.5em;
+    height: 22em;
+}
+
+.ultimos-animes-agregados .animes-agregados-imagen{
+    width: 100%;
+    height: 80%;
+    min-width: 12.5em;
+    min-height: 18.75em;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    transition: all 0.4s;
+    overflow: hidden;
+}   
+
+.ultimos-animes-agregados .animes-agregados .titulo-animes-agregados{
+    padding: 0.625em;
+}
+
+.titulo-animes-agregados{
+    margin: 0;
+    text-align: center;
+    background: var(--fondo_oscuro);
+    z-index: 3;
+}
+
+.titulo-animes-agregados h3{
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.titulo-animes-agregados h3,
+.animes-agregados a{
+    text-decoration: none;
+    color: #aaa;
+    transition: all 0.6s ease;
+}
+
+.animes-agregados-imagen img{
+    width: 100%;
+    height: 80%;
+    min-width: 12.5em;
+    min-height: 18.75em;
+    transition: all 0.6s ease;
+}
+
+.animes-agregados:hover .animes-agregados-imagen img{
+    filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.animes-agregados:hover h3{
+    color: white;
+}
+
+.animes-agregados-imagen::before{
+    content: '';
+    background: var(--color_principal);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.animes-agregados-imagen .fa-play{
+    position: absolute;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.animes-agregados:hover .animes-agregados-imagen .fa-play{
+    opacity: 1;
+}
+
+/*----Comienzo del Aside----*/
+
+aside{
+    float: left;
+    width: 20%;
+    padding: 20px;
+    margin-top: 25px;
+    margin-left: 2%;
+    min-height: 1000px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+aside h2{
+    color: white;
+    text-align: center;
+}
+
+/*----Fin del Aside----*/
+
+/*----Comienzo del footer----*/
+
+footer{
+    margin-top: 25px;
+    padding: 20px;
+    background: var(--fondo);
+    color: white;
+}
+
+.footer-contenido{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box-footer-informacion{
+    width: 50%;
+}
+
+.box-footer-social{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .box-footer-social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    color: #aaa;
+    float: left;
+    margin: 0 4px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.footer-contenido a:hover{
+    color: white;
+    background: var(--color_principal_selec);
+}
+
+.box-copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-copyright p,
+.box-copyright .footer-info-copyright{
+    margin-top: 4px;
+    color: #aaa;
+}
+
+.footer-info-copyright{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    border-radius: 100px;
+}
+
+.box-copyright .footer-info-copyright a{
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 4px;
+    transition: all 0.4s ease;
+}
+
+.box-copyright .footer-info-copyright a:hover{
+    color: white;
+}
+
+/*----Fin del footer----*/
+
+/*----Fin del cuerpo del contenido----*/
+
+/*----Detalles de las entradas----*/
+
+.estreno{
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -2.5em;
+    top: 1em;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    width: 10em;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--estreno);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    line-height: 2.5em;
+}
+
+.serie-anime{
+    position: absolute;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5em;
+    width: 5em;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--serie_anime);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    line-height: 2.5em;
+}
+
+.pelicula-anime{
+    position: absolute;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5em;
+    width: 6.6em;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--pelicula_anime);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    line-height: 2.5em;
+}
+
+.tag-episodio{
+    position: absolute;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    max-width: 10em;
+    padding: 0 0.6em;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--episodio);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    line-height: 25px;
+    top: 1.6em;
+    left: 0;
+}
+
+.subidos{
+    right: 0.25em;
+    bottom: 3.7em;
+}
+
+.agregados{
+    right: 1.2em;
+    bottom: 6.2em;
+}
+
+.mas-vistos{
+    right: 1em;
+    top: 1em;
+    box-shadow: none;
+}
+
+/*----Comienzo de la sección del Botón "Ir arriba"----*/
+
+#ir-arriba{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background: var(--color_principal);
+    font-size: 16px;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    transform: scale(0);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 40;
+}
+
+#ir-arriba:hover{
+    background: var(--color_principal_selec);
+    transform: scale(1.1);
+}
+
+/*----Fin de la sección del Botón "Ir arriba"----*/
+
+/*----Comienzo de la sección de la pantalla de carga----*/
+
+#contenido-carga{
+    background: var(--fondo);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease ;
+    -o-transition: all 1s ease ;
+    transition: all 1s ease ;
+    z-index: 1000;
+}
+
+#carga{
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-left-color: var(--color_principal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+#contenido-carga h3{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    margin: auto;
+    color: var(--color_principal);
+    font-size: 20px;
+    font-weight: 700;
+    font-family:  'Roboto', sans-serif;
+}
+
+@keyframes girar{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/*----Fin de la sección de la pantalla de carga----*/
+
+/*----Iconos con CSS----*/
+
+/*Pokeball*/
+
+.pokeball{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+    border-radius: 1.25em;
+    overflow: hidden;
+    box-shadow: 0.0625em 0.0625em 0.3125em rgba(0, 0, 0, 0.5);
+}
+
+.pokeball::before{
+    content: '';
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 1.25em;
+    position: absolute;
+    background: radial-gradient(at top left, rgba(255, 255, 255, 0.4) 20%, rgba(0, 0, 0, 0.6));
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.pokeball-red{
+    width: 2.5em;
+    height: 1.25em;
+    background: red;
+}
+
+.pokeball-detalles{
+    width: 2.5em;
+    height: 0.375em;
+    position: absolute;
+    margin-top: -0.25em;
+    background: #333;
+}
+
+.pokeball-detalles::before{
+    content: '';
+    width: 0.875em;
+    height: 0.875em;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -0.25em;
+    margin-left: 0.8125em;
+}
+
+.pokeball-detalles::after{
+    content: '';
+    width: 0.3125em;
+    height: 0.3125em;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 0.03125em;
+    margin-left: 1.09375em;
+}
+
+/*Dragon Ball*/
+
+.dragon-ball{
+    width: 2.5em;
+    height: 2.5em;
+    background: radial-gradient(#F7AA16, #EB6321);
+    border-radius: 1.25em;
+    box-shadow: 0.0625em 0.0625em 0.3125em rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.dragon-ball::before{
+    content: '';
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 1.25em;
+    position: absolute;
+    background: radial-gradient(at top left, rgba(255, 255, 255, 0.4) 20%, rgba(0, 0, 0, 0.6));
+    opacity: 0.2;
+    z-index: 4;
+}
+
+.dragon-ball-detalles{
+    width: 0.375em;
+    height: 0.375em;
+    position: absolute;
+    top: 0.375em;
+    left: 0.5em;
+    border-radius: 0.1875em;
+    background: white;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.dragon-ball .icon-star{
+    color: orangered;
+    position: absolute;
+    top: 0.6875em;
+    left: 0.75em;
+    z-index: 3;
+}
+
+/*Sharingan*/
+
+.sharingan{
+    background: #E41414;
+    width: 2.5em;
+    height: 2.5em;
+    position: relative;
+    border: 0.125em black solid;
+    box-shadow: 0.0625em 0.0625em 0.3125em rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.sharingan::before{
+    content: '';
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(at top left, rgba(255, 255, 255, 0.4) 20%, rgba(0, 0, 0, 0.6));
+    opacity: 0.2;
+    z-index: 3;
+}
+
+.sharingan .inner-ring{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.25em;
+    height: 1.25em;
+    border: 0.125em rgba(110, 13, 13, 0.5) solid;
+}
+
+.sharingan, .inner-ring, .tomoe, .sharingan-circle{
+    border-radius: 50%;
+}
+
+.tomoe, .sharingan-circle{
+    position: absolute;
+    width: 0.3125em;
+    height: 0.3125em;
+    background: black;
+}
+
+.sharingan .tomoe:nth-child(1){
+    top: -0.25em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sharingan .tomoe:nth-child(2){
+    bottom:  -0.0625em;
+    left: -0.125em;
+    transform: rotate(-120deg);
+}
+
+.sharingan .tomoe:nth-child(3){
+    bottom:  -0.0625em;
+    right: -0.125em;
+    transform: rotate(120deg);
+}
+
+.sharingan .tomoe::before{
+    content: '';
+    position: absolute;
+    top: -0.1875em;
+    left: 0.0125em;
+    width: 0.1875em;
+    height: 0.3125em;
+    border-left: 0.2875em solid black;
+    border-radius: 100% 0 0 0;
+}
+
+.sharingan-circle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.375em;
+    height: 0.375em;
+    box-shadow: 0 0 0.5em 0.15625em rgba(0, 0, 0, 0.8);
+}
+
+.tag-orden{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.titulo-tag-orden{
+    font-weight: bold;
+    display: block;
+    position: relative;
+    padding: 10px 10px;
+    background: var(--color_principal);
+    border-radius: 0.3125em;
+    color: white;
+    text-transform: capitalize;
+}
+
+.titulo-tag-orden i{
+    margin-right: 8px;
+    font-size: 18;
+}
+
+.titulo-tag-orden::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border-top: 8px solid transparent;
+    border-right: 8px solid var(--color_principal);
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    top: calc(50% - 8px);
+    left: -15px;
+}
+
+/*----Medias Queries----*/
+
+@media screen and (max-width: 1260px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 20px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 18px;
+    }
+
+    .ultimos-episodios{
+        margin: 20px auto;
+        grid-gap: 6px;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 0.5fr);
+    }
+
+    .ultimos-animes-agregados{
+        margin: 20px auto;
+        grid-gap: 6px;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 0.5fr);
+    }
+    
+    .serie-anime{
+        font-size: 12px;
+    }
+    
+    .pelicula-anime{
+        font-size: 12px;
+    }
+
+    .tag-episodio{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+
+    main .contenedor{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1080px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 18px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 16px;
+    }
+
+    .serie-anime{
+        font-size: 11px;
+    }
+    
+    .pelicula-anime{
+        font-size: 11px;
+    }
+
+    .tag-episodio{
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+
+    header .logo{
+        font-size: 36px;
+    }
+
+    header .navbar{
+        display: none;
+    }
+
+    header .btn-navbar-responsive{
+        display: flex;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #aaa;
+        outline: none;
+        border: none;
+        padding: 0;
+        transition: all 0.4s ease;
+    }
+    
+    .btn-navbar-responsive:hover{
+        color: white;
+    }
+
+    .pushbar{
+        background: var(--fondo);;
+    }
+    
+    .pushbar .btn-cerrar{
+        text-align: left;
+        margin: 10px;
+    }
+    
+    .pushbar .btn-cerrar button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--fondo_oscuro);
+        color: white;
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .navbar-responsive nav ul li a{
+        display: block;
+        padding: 20px;
+        color: #aaa;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.6s ease;
+    }
+    
+    .navbar-responsive a:hover{
+        color: white;
+        background: var(--color_principal);
+    }
+    
+    .navbar-responsive nav ul li a.activo{
+        color: white;
+    }
+
+    .navbar-responsive nav ul li a > i{
+        margin-right: 8px;
+    }
+
+    .navbar-responsive .buscador{
+        position: relative;
+        padding: 0;
+        margin: 10px auto;
+        background: transparent;
+    }
+    
+    .navbar-responsive .buscador input{
+        width: 200px;
+        height: 40px;
+        padding: 0 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: white;
+        background: rgba(0,0,0,0.1);
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        transition: all 0.4s ease;
+    }
+    
+    .navbar-responsive .buscador input:focus{
+        background: rgba(0,0,0,0.2);
+    }
+    
+    .navbar-responsive .btn-buscador{
+        position: absolute;
+        right: 0;
+        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+        outline: none;
+        border: none;
+        background: transparent;
+        line-height: 40px;
+        text-align: center;
+        color: #aaa;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+    
+    .navbar-responsive .btn-buscador:hover{
+        color: white;
+    }
+
+    .navbar-responsive .avatar{
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .navbar-responsive .avatar .fa-user{
+        display: flex;
+        background: var(--color_principal);
+        font-size: 20px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        transition: all 0.6s ease;
+    }
+
+    .avatar:hover .fa-user{
+        background: white;
+        color: var(--color_principal);
+    }
+    
+    .navbar-responsive .avatar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #aaa;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: all 0.6s ease;
+    }
+
+    .avatar:hover a h3{
+        color: white;
+    }
+
+    .contenido{
+        width: 100%;
+        margin-top: 25px;
+        background: var(--fondo);
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .carousel{
+        margin: 0;
+    }
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 18px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 16px;
+    }
+
+     .footer-contenido{
+        display: block;
+     }
+     
+     .box-footer-informacion{
+        width: 100%;
+    }
+
+     .box-footer-social{
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+     .box-copyright{
+        display: block;
+    }
+
+    .titulo-tag-orden{
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 960px){
+
+    header .logo{
+        font-size: 36px;
+    }
+
+    .menu-navbar{
+        font-size: 26px;
+    }
+    
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 22px;
+    }
+    
+    .ultimos-episodios .episodio{
+        font-size: 20px;
+    }
+    
+    .ultimos-episodios{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 0.5fr);
+    }
+
+    .ultimos-animes-agregados{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 0.5fr);
+    }
+    
+        .serie-anime{
+            font-size: 14px;
+        }
+        
+        .pelicula-anime{
+            font-size: 14px;
+        }
+    
+        .tag-episodio{
+            font-size: 14px;
+        }
+}
+
+@media screen and (max-width: 880px){
+
+    .ultimos-episodios .episodio{
+        font-size: 18px;
+    }
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 20px;
+    }
+
+    .serie-anime{
+        font-size: 12px;
+    }
+    
+    .pelicula-anime{
+        font-size: 12px;
+    }
+
+    .tag-episodio{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .ultimos-episodios .episodio{
+        font-size: 16px;
+    }
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 18px;
+    }
+
+    .serie-anime{
+        font-size: 11px;
+    }
+    
+    .pelicula-anime{
+        font-size: 11px;
+    }
+
+    .tag-episodio{
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 750px){
+
+    header .logo{
+        font-size: 36px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 22px;
+    }
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 24px;
+    }
+
+    .ultimos-episodios{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 0.5fr);
+    }
+
+    .ultimos-animes-agregados{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 0.5fr);
+    }
+
+    .serie-anime{
+        font-size: 15px;
+    }
+    
+    .pelicula-anime{
+        font-size: 15px;
+    }
+
+    .tag-episodio{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 22px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 20px;
+    }
+
+    .serie-anime{
+        font-size: 14px;
+    }
+    
+    .pelicula-anime{
+        font-size: 14px;
+    }
+
+    .tag-episodio{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+
+    .ultimos-episodios .episodio{
+        font-size: 18px;
+    }
+    
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 20px;
+    }
+
+    .serie-anime{
+        font-size: 12px;
+    }
+    
+    .pelicula-anime{
+        font-size: 12px;
+    }
+
+    .tag-episodio{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 540px){
+
+    .ultimos-episodios .episodio{
+        font-size: 16px;
+    }
+    
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 18px;
+    }
+
+    .serie-anime{
+        font-size: 11px;
+    }
+    
+    .pelicula-anime{
+        font-size: 11px;
+    }
+
+    .tag-episodio{
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    header .logo{
+        font-size: 36px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 14px;
+    }
+    
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 16px;
+    }
+
+    .ultimos-episodios{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 0.5fr);
+    }
+
+    .ultimos-animes-agregados{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 0.5fr);
+    }
+
+    .serie-anime{
+        font-size: 10px;
+    }
+    
+    .pelicula-anime{
+        font-size: 10px;
+    }
+
+    .tag-episodio{
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 14px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 12px;
+    }
+
+    .serie-anime{
+        font-size: 8px;
+    }
+    
+    .pelicula-anime{
+        font-size: 8px;
+    }
+
+    .tag-episodio{
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+
+    header .logo{
+        font-size: 36px;
+    }
+
+    .menu-navbar{
+        font-size: 26px;
+    }
+
+    .titulo-episodios,
+    .titulo-agregados,
+    .titulo-mas-vistos{
+        font-size: 16px;
+    }
+
+    .serie-anime{
+        font-size: 6px;
+    }
+    
+    .pelicula-anime{
+        font-size: 6px;
+    }
+
+    .tag-episodio{
+        font-size: 6px;
+    }
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 22px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 20px;
+    }
+
+    .ultimos-episodios{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(15, 0.5fr);
+    }
+
+    .ultimos-animes-agregados{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(15, 0.5fr);
+    }
+
+    .serie-anime{
+        font-size: 14px;
+    }
+    
+    .pelicula-anime{
+        font-size: 14px;
+    }
+
+    .tag-episodio{
+        font-size: 14px;
+    }
+
+    .titulo-tag-orden{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 310px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 20px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 18px;
+    }
+
+    .serie-anime{
+        font-size: 12px;
+    }
+    
+    .pelicula-anime{
+        font-size: 12px;
+    }
+
+    .tag-episodio{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 280px){
+
+    .ultimos-animes-agregados .animes-agregados{
+        font-size: 18px;
+    }
+
+    .ultimos-episodios .episodio{
+        font-size: 16px;
+    }
+
+    .serie-anime{
+        font-size: 11px;
+    }
+    
+    .pelicula-anime{
+        font-size: 11px;
+    }
+
+    .tag-episodio{
+        font-size: 11px;
+    }
+
+}

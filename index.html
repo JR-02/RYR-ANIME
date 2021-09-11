@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Icon/pokeball-favicon.ico" type="image/x-icon">
+    <title>R&R:ANIME - Los mejores animes en HD</title>
+
+    <!-- Listas de Estilos --->
+    <link rel="stylesheet" href="Icon/icon.css">
+    <link rel="stylesheet" href="CSS/glider.min.css">
+    <link rel="stylesheet" href="CSS/pushbar.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+
+    <!-- Fuentes de letras --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2670b6c5d7.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+    <div id="contenido-carga">
+        <div id="carga"></div>
+        <h3>Cargando...</h3>
+    </div>
+
+    <header>
+
+        <div class="contenedor">
+
+            <a href="#">
+                <h2 class="logo">R&R:ANIME</h2>
+            </a>
+
+            <button class="btn-navbar-responsive" data-pushbar-target="navbar-responsive">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="navbar">
+
+                <nav>
+                    <ul>
+                        <li><a href="#" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+                        <li><a href="#"><i class="fas fa-list-ul"></i>Lista de Animes</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i>En emisión</a></li>
+                        <li><a href="#"><i class="fas fa-tags"></i>Categorías</a></li>
+                    </ul>
+                </nav>
+
+                <div class="buscador">
+                    <input type="text" placeholder="Buscar..." required class="input-buscador">
+                    <button type="submit" class="btn-buscador">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="avatar"><i class="fas fa-user"></i></a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="contenedor">
+
+            <div class="contenido">
+
+                <div class="titulo-mas-vistos">
+                    <div class="dragon-ball">
+                        <span class="icon-star"></span>
+                        <div class="dragon-ball-detalles"></div>
+                    </div>
+                    <h2>Los animes más vistos</h2>
+
+                    <div class="tag-orden">
+                        <h4 class="titulo-tag-orden"><i class="fas fa-calendar"></i>Mes</h4>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <hr>
+
+                <div class="carousel">
+                    <div class="carousel-contenedor">
+                        <button aria-label="Anterior" class="carousel-anterior">
+                            <span class="icon-chevron-left"></span>
+                        </button>
+
+                        <div class="carousel-lista">
+
+                            <a href="#" class="carousel-elemento" title="Shingeki no Kyojin">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/1.jpg" alt="Shingeki no Kyojin">
+                                </div>
+                                <span class="serie-anime mas-vistos">Anime</span>
+                                <p>Shingeki no Kyojin</p>
+                            </a>
+
+                            <a href="#" class="carousel-elemento" title="Island">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/2.jpg" alt="Island">
+                                </div>
+                                <span class="serie-anime mas-vistos">Anime</span>
+                                <p>Island</p>
+                            </a>
+
+                            <a href="#" class="carousel-elemento" title="Boku no Hero Academia: Futari no Hero">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/3.jpg"
+                                        alt="Boku no Hero Academia: Futari no Hero">
+                                </div>
+                                <span class="pelicula-anime mas-vistos">Película</span>
+                                <p>Boku no Hero Academia: Futari no Hero</p>
+                            </a>
+
+                            <a href="#" class="carousel-elemento" title="No Game No Life">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/4.jpg" alt="No Game No Life">
+                                </div>
+                                <span class="serie-anime mas-vistos">Anime</span>
+                                <p>No Game No Life</p>
+                            </a>
+
+                            <a href="#" class="carousel-elemento" title="Goblin Slayer">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/5.jpg" alt="Goblin Slayer">
+                                </div>
+                                <span class="serie-anime mas-vistos">Anime</span>
+                                <p>Goblin Slayer</p>
+                            </a>
+
+                            <a href="#" class="carousel-elemento" title="Kimi no Suizou wo Tabetai">
+                                <div class="carousel-imagen">
+                                    <i class="fas fa-play"></i>
+                                    <img loading="lazy" src="Img/animes-mas-visitados/6.jpg"
+                                        alt="Kimi no Suizou wo Tabetai">
+                                </div>
+                                <span class="pelicula-anime mas-vistos">Película</span>
+                                <p>Kimi no Suizou wo Tabetai</p>
+                            </a>
+
+                        </div>
+
+                        <button aria-label="Siguiente" class="carousel-siguiente">
+                            <span class="icon-chevron-right"></span>
+                        </button>
+                    </div>
+
+                    <div role="tablist" class="carousel-indicadores"></div>
+                </div>
+
+                <div class="titulo-episodios">
+                    <div class="pokeball">
+                        <div class="pokeball-red"></div>
+                        <div class="pokeball-detalles"></div>
+                    </div>
+                    <h2>Últimos episodios</h2>
+
+                    <div class="tag-orden">
+                        <h4 class="titulo-tag-orden"><i class="fas fa-calendar-day"></i>Hoy</h4>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <hr>
+
+                <div class="ultimos-episodios">
+
+                    <a href="#" class="episodio" title="Fruits Basket (2020)">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/1.jpg" alt="Fruits Basket (2020">
+                        </div>
+                        <span class="tag-episodio">Ep. 6</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Fruits Basket (2020)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Nanatsu no Taizai: Imashime no Fukkatsu">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/2.jpg"
+                                alt="Nanatsu no Taizai: Imashime no Fukkatsu">
+                        </div>
+                        <span class="tag-episodio">Ep. 21</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Nanatsu no Taizai: Imashime no Fukkatsu</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Shingeki no Kyojin 2">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/3.jpg" alt="Shingeki no Kyojin 2">
+                        </div>
+                        <span class="tag-episodio">Ep. 5</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Shingeki no Kyojin 2</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Shuumatsu no Valkyrie">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/4.jpg" alt="Shuumatsu no Valkyrie">
+                        </div>
+                        <span class="tag-episodio">Ep. 1</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Shuumatsu no Valkyrie</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Grand Blue">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/5.jpg" alt="Grand Blue">
+                        </div>
+                        <span class="tag-episodio">Ep. 10</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Grand Blue</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Irozuku Sekai no Ashita kara">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/6.jpg" alt="Irozuku Sekai no Ashita kara">
+                        </div>
+                        <span class="tag-episodio">Ep. 7</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Irozuku Sekai no Ashita kara</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Nisekoi">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/7.jpg" alt="Nisekoi">
+                        </div>
+                        <span class="tag-episodio">Ep. 19</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Nisekoi</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Kaguya-sama wa Kokurasetai Tensai-tachi no Renai Zunousen">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/8.jpg"
+                                alt="Kaguya-sama wa Kokurasetai Tensai-tachi no Renai Zunousen">
+                        </div>
+                        <span class="tag-episodio">Ep. 8</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Kaguya-sama wa Kokurasetai Tensai-tachi no Renai Zunousen</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Kanojo, Okarishimasu">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/9.jpg" alt="Kanojo, Okarishimasu">
+                        </div>
+                        <span class="tag-episodio">Ep. 2</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Kanojo, Okarishimasu</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Kyoukai no Kanata">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/10.jpg" alt="Kyoukai no Kanata">
+                        </div>
+                        <span class="tag-episodio">Ep. 5</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Kyoukai no Kanata</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Masamune-kun no Revenge">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/11.jpg" alt="Masamune-kun no Revenge">
+                        </div>
+                        <span class="tag-episodio">Ep. 1</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Masamune-kun no Revenge</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio"
+                        title="Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai (Anohana)">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/12.jpg"
+                                alt="Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai (Anohana)">
+                        </div>
+                        <span class="tag-episodio">Ep. 7</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Ano Hi Mita Hana no Namae o Bokutachi wa Mada Shiranai (Anohana)</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Shichisei no Subaru">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/13.jpg" alt="Shichisei no Subaru">
+                        </div>
+                        <span class="tag-episodio">Ep. 1</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Shichisei no Subaru</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Dororo">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/14.jpg" alt="Dororo">
+                        </div>
+                        <span class="tag-episodio">Ep. 3</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Dororo</h3>
+                        </div>
+                    </a>
+
+                    <a href="#" class="episodio" title="Swort Art Online: Alicization - War of Underworld">
+                        <div class="imagen-episodio">
+                            <i class="fas fa-play"></i>
+                            <img loading="lazy" src="Img/ultimos-episodios/15.jpg"
+                                alt="Swort Art Online: Alicization - War of Underworld">
+                        </div>
+                        <span class="tag-episodio">Ep. 13</span>
+                        <span class="serie-anime subidos">Anime</span>
+                        <div class="titulo-episodio-agregado">
+                            <h3>Swort Art Online: Alicization - War of Underworld</h3>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="titulo-agregados">
+                    <div class="sharingan">
+                        <div class="inner-ring">
+                            <div class="tomoe"></div>
+                            <div class="tomoe"></div>
+                            <div class="tomoe"></div>
+                            <div class="sharingan-circle"></div>
+                        </div>
+                    </div>
+                    <h2>Últimos animes agregados</h2>
+
+                    <div class="tag-orden">
+                        <h4 class="titulo-tag-orden"><i class="fas fa-calendar-day"></i>Hoy</h4>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+                <hr>
+
+                <div class="ultimos-animes-agregados">
+
+                    <div class="animes-agregados" title="Jujutsu Kaisen">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/1.jpg" alt="Jujutsu Kaisen"
+                                    loading="lazy">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Jujutsu Kaisen</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Tate no Yuusha no Nariagari">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/2.jpg" alt="Tate no Yuusha no Nariagari">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Tate no Yuusha no Nariagari</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Nanatsu no Taizai: Kamigami no Gekirin">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/3.jpg"
+                                    alt="Nanatsu no Taizai: Kamigami no Gekirin">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Nanatsu no Taizai: Kamigami no Gekirin</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Mirai Nikki">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/4.jpg" alt="Mirai Nikki">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Mirai Nikki</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Shingeki no Kyojin: The Final Season">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/5.jpg"
+                                    alt="Shingeki no Kyojin The Final Season">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Shingeki no Kyojin: The Final Season</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Ousama Game The Animation">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/6.jpg" alt="Ousama Game The Animation">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Ousama Game The Animation</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Tokyo Ghoul">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/7.jpg" alt="Tokyo Ghoul">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Tokyo Ghoul</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Vinland Saga">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/8.jpg" alt="Vinland Saga">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Vinland Saga</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Tasogere Otome x Amnesia">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/9.jpg" alt="Tasogere Otome x Amnesia">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Tasogere Otome x Amnesia</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Katsute Kami Datta Kemono-tachi e">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/10.jpg"
+                                    alt="Katsute Kami Datta Kemono-tachi e">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Katsute Kami Datta Kemono-tachi e</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Kimi no Na wa">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/11.jpg" alt="Kimi no Na wa">
+                            </div>
+                            <span class="pelicula-anime agregados">Película</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Kimi no Na wa</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Death Note">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/12.jpg" alt="Death Note">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Death Note</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Punch-Man">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/13.jpg" alt="One Punch-Man">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>One Punch-Man</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Violet Evengarden">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/14.jpg" alt="Violet Evengarden">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Violet Evengarden</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="animes-agregados" title="Kanata no Astra">
+                        <a href="#">
+                            <span class="estreno">Estreno</span>
+                            <div class="animes-agregados-imagen">
+                                <i class="fas fa-play"></i>
+                                <img loading="lazy" src="Img/animes-agregados/15.jpg" alt="Kanata no Astra">
+                            </div>
+                            <span class="serie-anime agregados">Anime</span>
+                            <div class="titulo-animes-agregados">
+                                <h3>Kanata no Astra</h3>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="clearfix"></div>
+
+    <footer>
+
+        <div class="contenedor">
+
+            <div class="footer-contenido">
+
+                <div class="box-footer-informacion">
+                    <p>Este sitio no almacena ningún archivo en sus servidores, solo comparte contenido almacenado en
+                        sitios dedicados a compartir archivos de manera gratuita.</p>
+                </div>
+
+                <div class="box-footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="box-copyright">
+                <p>Todos los derechos reservados © 2021 <b>R&R:Anime</b></p>
+                <div class="footer-info-copyright">
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Más sobre R&R:Anime</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div id="ir-arriba">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+
+    <div data-pushbar-id="navbar-responsive" data-pushbar-direction="right"
+        class="pushbar from_right navbar-responsive">
+
+        <div class="btn-cerrar">
+            <button data-pushbar-close><span class="icon-cross"></span></button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="activo"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="#"><i class="fas fa-list-ul"></i>Lista de Animes</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i>En emisión</a></li>
+                <li><a href="#"><i class="fas fa-tags"></i>Categorías</a></li>
+            </ul>
+        </nav>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar..." required class="input-buscador">
+            <button type="submit" class="btn-buscador">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <a href="#" class="avatar"><i class="fas fa-user"></i>
+            <h3>Usuario</h3>
+        </a>
+    </div>
+
+    <!--JavaScript-->
+    <script src="JS/pushbar.js"></script>
+    <script src="JS/glider.min.js"></script>
+    <script src="JS/main.js"></script>
+
+</body>
+
+</html>
